@@ -1,0 +1,22 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Homepage - Il mio ecommerce{% endblock %}
+
+{% block content %}
+<h1>Benvenuto nel nostro E-commerce</h1>
+<p>Sfoglia i nostri prodotti e aggiungi al carrello quelli che ti interessano.</p>
+
+{% if featured_products %}
+<h2>Prodotti in evidenza</h2>
+<ul>
+    {% for product in featured_products %}
+    <li>
+        {{ product.name }} - {{ product.price }} €
+        <p>{{ product.description|truncatewords:20 }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<p><a href="{% url 'product_list' %}">Visualizza tutti i prodotti</a></p>
+{% endblock %}

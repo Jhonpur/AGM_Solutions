@@ -1,0 +1,18 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - Il mio ecommerce{% endblock %}
+
+{% block content %}
+<h1>Dashboard Vendite</h1>
+
+<div>
+    <h2>Vendite per Categoria</h2>
+    <img src="{% static 'store/pie_chart.png' %}" alt="Grafico a torta">
+</div>
+
+<div>
+    <h2>Vendite per Data</h2>
+    <img src="{% static 'store/bar_chart.png' %}" alt="Grafico a barre">
+</div>
+{% endblock %}

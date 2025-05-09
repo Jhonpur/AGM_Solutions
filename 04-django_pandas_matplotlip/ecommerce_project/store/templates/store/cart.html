@@ -1,0 +1,14 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<h1>Carrello della spesa</h1>
+{% if not cart %}
+<p>Il tuo carrello è vuoto.</p>
+{% else %}
+<ul>
+{% for item in cart %}
+<li>{{ item.product.name }} - {{ item.product.price }} x {{ item.quantity }}</li>
+{% endfor %}
+</ul>
+<p>Totale: {{ cart_total }}</p>
+{% endif %}
+{% endblock %}

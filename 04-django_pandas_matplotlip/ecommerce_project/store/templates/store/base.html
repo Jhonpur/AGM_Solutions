@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}Ecommerce{% endblock %}</title>
+{% load static %}
+</head>
+<body>
+<header>
+<h1>Il mio ecommerce</h1>
+<nav>
+<ul>
+<li><a href="{% url 'product_list' %}">Prodotti</a></li>
+<li><a href="{% url 'cart' %}">Carrello</a></li>
+<li><a href="{% url 'grafici' %}">Grafici</a></li>
+<li><a href="{% url 'home' %}">Home</a></li>
+</ul>
+</nav>
+</header>
+<main>
+{% block content %}
+{% endblock %}
+</main>
+<footer>
+<p>Copyright © 2023 La mia ditta di ecommerce</p>
+</footer>
+</body>
+</html>
